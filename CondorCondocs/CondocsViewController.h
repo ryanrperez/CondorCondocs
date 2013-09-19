@@ -10,4 +10,6 @@
 
 @interface CondocsViewController : UIViewController
 
+@property (nonatomic, strong) NSMutableDictionary* allUsers;
+
 @end

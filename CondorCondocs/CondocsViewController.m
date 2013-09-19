@@ -26,4 +26,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self performSegueWithIdentifier:@"Start Screen" sender:self];
+}
+
+- (NSMutableDictionary*)allUsers {
+    if(!_allUsers) {
+        _allUsers = [[NSMutableDictionary alloc] init];
+    }
+    return _allUsers;
+}
+
+- (void)addUser:(NSString*)name :(NSString*)password {
+    [self.allUsers setValue:password forKey:name];
+}
+
 @end
